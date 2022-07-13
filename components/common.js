@@ -15,6 +15,12 @@ export const Btn = styled.TouchableOpacity`
   border-radius: 20px;
   border-color: rgba(255, 255, 255, 0.5);
 `;
+export const Text = styled.Text`
+  color: white;
+  font-size: 16px;
+  text-align: center;
+`;
+
 export const BtnText = styled.Text`
   color: white;
   font-size: 16px;

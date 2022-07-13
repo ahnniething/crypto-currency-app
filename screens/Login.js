@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
+import {Text, BtnText} from '../components/common'
 import { BLACK_COLOR } from "../colors";
 
 const Container = styled.View`
@@ -15,23 +16,14 @@ const Wrapper = styled.View`
   justify-content: center;
 `;
 
-const Text = styled.Text`
-  font-size: 16px;
-  text-align: center;
-  color: white;
-`;
 const Btn = styled.TouchableOpacity``;
-const BtnTxt = styled.Text`
-  font-size: 16px;
-  color: white;
-`;
 
 const Login = ({ navigation: { navigate } }) => (
   <Container>
     <Wrapper>
       <Text>Don't have an account? </Text>
       <Btn onPress={() => navigate("Join")}>
-        <BtnTxt>Join &rarr;</BtnTxt>
+        <BtnText>Join &rarr;</BtnText>
       </Btn>
     </Wrapper>
   </Container>

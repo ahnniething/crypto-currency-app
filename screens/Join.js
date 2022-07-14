@@ -12,10 +12,11 @@ const Container = styled.View`
 `;
 
 const Join = () => {
+  const passwordInput = useRef();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const onSubmitEditing = () => {
-   console.log("password focus")
+   passwordInput.current.focus();
   };
 
   return (
@@ -32,6 +33,7 @@ const Join = () => {
         placeholderTextColor={"rgba(255, 255, 255, 0.7)"}
       />
       <TextInput
+        ref={passwordInput}
         placeholder="Password"
         secureTextEntry
         value={password}

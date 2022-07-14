@@ -30,8 +30,12 @@ const Coin = ({ id, symbol, index }) => {
           delay: index * 100,
         }).start();
       }, []);
+      const scale = opacity.interpolate({
+        inputRange: [0, 1],
+        outputRange: [0.7, 1],
+      });
   return (
-    <Wrapper style={{ flex: 0.31, opacity }}>
+    <Wrapper style={{ flex: 0.31, opacity, transform: [{ scale }] }}>
         <Icon
          source={{
             uri: `https://static.coinpaprika.com/coin/${id}/logo.png`

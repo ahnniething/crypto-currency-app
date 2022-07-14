@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from "react";
 import { Animated, View } from "react-native";
 import styled from "styled-components/native";
 
-
 const Wrapper = styled(Animated.createAnimatedComponent(View))`
   background-color: rgba(255, 255, 255, 0.1);
   padding: 20px;
@@ -22,11 +21,18 @@ const Icon = styled.Image`
   margin-bottom: 10px;
 `;
 
-const Coin = ({ symbol, index }) => {
+const Coin = ({ id, symbol, index }) => {
   return (
     <Wrapper style={{ flex: 0.31 }}>
+        <Icon
+         source={{
+            uri: `https://static.coinpaprika.com/coin/${id}/logo.png`
+          }}
+        />
       <CoinName>{symbol}</CoinName>
     </Wrapper>
   );
 };
 export default Coin;
+
+

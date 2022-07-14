@@ -21,7 +21,7 @@ const Icon = styled.Image`
   margin-bottom: 10px;
 `;
 
-const Coin = ({ id, symbol, index }) => {
+const Coin = ({ symbol, index }) => {
     const opacity = useRef(new Animated.Value(0)).current;
     useEffect(() => {
         Animated.spring(opacity, {
@@ -38,7 +38,7 @@ const Coin = ({ id, symbol, index }) => {
     <Wrapper style={{ flex: 0.31, opacity, transform: [{ scale }] }}>
         <Icon
          source={{
-            uri: `https://static.coinpaprika.com/coin/${id}/logo.png`
+            uri: `https://coinicons-api.vercel.app/api/icon/${symbol.toLowerCase()}`
           }}
         />
       <CoinName>{symbol}</CoinName>

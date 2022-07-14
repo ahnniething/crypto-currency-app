@@ -29,6 +29,7 @@ const Join = () => {
     if (loading) {
       return;
     }
+    setLoading(true);
     try {
       const userCredential = await auth().createUserWithEmailAndPassword(
         email,

@@ -22,8 +22,16 @@ const Icon = styled.Image`
 `;
 
 const Coin = ({ id, symbol, index }) => {
+    const opacity = useRef(new Animated.Value(0)).current;
+    useEffect(() => {
+        Animated.spring(opacity, {
+          toValue: 1,
+          useNativeDriver: true,
+          delay: index * 100,
+        }).start();
+      }, []);
   return (
-    <Wrapper style={{ flex: 0.31 }}>
+    <Wrapper style={{ flex: 0.31, opacity }}>
         <Icon
          source={{
             uri: `https://static.coinpaprika.com/coin/${id}/logo.png`

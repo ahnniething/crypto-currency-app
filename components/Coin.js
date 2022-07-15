@@ -39,7 +39,7 @@ const Coin = ({ symbol, index }) => {
   return (
     <TouchableOpacity
       style={{ flex: 0.31 }}
-      onPress={() => navigation.navigate("Detail")}
+      onPress={() => navigation.navigate("Detail", { symbol})}
     >
       <Wrapper style={{ flex: 0.31, opacity, transform: [{ scale }] }}>
         <Icon

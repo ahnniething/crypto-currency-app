@@ -6,7 +6,12 @@ import { Icon } from "../components/Coin";
 
 const Container = styled.ScrollView``;
 
-const Detail = ({}) => {
+const Detail = ({ navigation, route:{params: {symbol}} }) => {
+    useEffect(()=> {
+        navigation.setOptions({
+            title: symbol
+        })
+    }, []);
   return <Container />;
 };
 export default Detail;

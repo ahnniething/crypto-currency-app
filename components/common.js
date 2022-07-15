@@ -27,4 +27,10 @@ export const BtnText = styled.Text`
   text-align: center;
 `;
 
+export const Icon = styled.Image`
+  border-radius: 20px;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 10px;
+`;
 

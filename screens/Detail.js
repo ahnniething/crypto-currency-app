@@ -1,17 +1,21 @@
-import React, { useEffect } from "react";
-import { useQuery } from "react-query";
+import { useEffect } from "react";
 import styled from "styled-components/native";
-import { history, info } from "../api";
-import { Icon } from "../components/Coin";
+import { Icon } from "../components/common"
 
 const Container = styled.ScrollView``;
 
 const Detail = ({ navigation, route:{params: {symbol}} }) => {
-    useEffect(()=> {
+    useEffect(() => {
         navigation.setOptions({
-            title: symbol
-        })
-    }, []);
+          headerTitle: () => (
+            <Icon
+              source={{
+                uri: `https://coinicons-api.vercel.app/api/icon/${symbol.toLowerCase()}`,
+              }}
+            />
+          ),
+        });
+      }, []);
   return <Container />;
 };
 export default Detail;

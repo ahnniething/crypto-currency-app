@@ -2,6 +2,7 @@ import { useNavigation } from "@react-navigation/native";
 import React, { useEffect, useRef } from "react";
 import { Animated, View, TouchableOpacity } from "react-native";
 import styled from "styled-components/native";
+import { Icon } from "../components/common"
 
 const Wrapper = styled(Animated.createAnimatedComponent(View))`
   background-color: rgba(255, 255, 255, 0.1);
@@ -13,13 +14,6 @@ const CoinName = styled.Text`
   color: white;
   font-weight: 600;
   font-size: 16px;
-`;
-
-const Icon = styled.Image`
-  border-radius: 20px;
-  width: 40px;
-  height: 40px;
-  margin-bottom: 10px;
 `;
 
 const Coin = ({ symbol, index }) => {

@@ -16,7 +16,7 @@ const CoinName = styled.Text`
   font-size: 16px;
 `;
 
-const Coin = ({ symbol, index }) => {
+const Coin = ({ index, id, symbol }) => {
   const navigation = useNavigation();
   const opacity = useRef(new Animated.Value(0)).current;
   useEffect(() => {
@@ -33,7 +33,7 @@ const Coin = ({ symbol, index }) => {
   return (
     <TouchableOpacity
       style={{ flex: 0.31 }}
-      onPress={() => navigation.navigate("Detail", { symbol})}
+      onPress={() => navigation.navigate("Detail", { symbol, id})}
     >
       <Wrapper style={{ flex: 0.31, opacity, transform: [{ scale }] }}>
         <Icon

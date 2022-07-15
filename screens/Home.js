@@ -52,7 +52,7 @@ const Home = () => {
         }}
         keyExtractor={(item) => item.id + ""}
         renderItem={({ item, index }) => (
-          <Coin index={index} symbol={item.symbol}/>
+          <Coin index={index} id={item.id} symbol={item.symbol}/>
         )}
       />
     </Container>

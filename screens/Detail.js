@@ -66,4 +66,7 @@ const Detail = ({
     </Container>
   );
 };
+
+
+
 export default Detail;

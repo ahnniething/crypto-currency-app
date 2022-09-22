@@ -46,4 +46,4 @@ const Coin = ({ index, id, symbol }) => {
     </TouchableOpacity>
   );
 };
-export default Coin;
+export default React.memo(Coin);

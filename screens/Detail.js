@@ -46,6 +46,7 @@ const Detail = ({
       );
     }
   });
+  
   return <Container />;
 };
 export default Detail;
